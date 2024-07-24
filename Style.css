@@ -1,0 +1,49 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    padding: 20px;
+    background-color: #f4f4f4;
+  }
+  
+  h1 {
+    text-align: center;
+    color: #333;
+  }
+  
+  form {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  label {
+    font-size: 18px;
+    margin-right: 10px;
+  }
+  
+  input[type="number"] {
+    padding: 5px;
+    font-size: 16px;
+    margin-right: 10px;
+  }
+  
+  button {
+    padding: 5px 10px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  #result {
+    border-top: 1px solid #ccc;
+    padding-top: 20px;
+    margin-top: 20px;
+  }
+  
+  .weather-info {
+    margin-bottom: 10px;
+  }
+  
+  .weather-image {
+    width: 100px;
+    height: auto;
+  }
+  

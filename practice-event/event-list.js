@@ -19,7 +19,7 @@ let c9 = document.querySelector('#cell9');
 c9.addEventListener('keydown', changeColor);
 let c10 = document.querySelector('#cell10');
 c10.addEventListener('keypress', changeColor);
-function changeColor(event) {
+ function changeColor(event) {
     
     let r = Math.floor(Math.random() * 256);
     let g = Math.floor(Math.random() * 256);

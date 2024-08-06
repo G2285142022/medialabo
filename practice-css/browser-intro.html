@@ -14,10 +14,14 @@
             border-radius: 5px;
         }
         h1 {
-            color: #f0f8ff; 
-            background-color: #4682b4;
+            color: white;
+            background-color: transparent;
             padding: 10px;
             text-align: center;
+            text-shadow: 0 0 5px rgba(0, 0, 255, 0.7), 0 0 10px rgba(0, 0, 255, 0.7), 0 0 15px rgba(0, 0, 255, 0.7);
+        }
+        p, ul {
+            color: #00008B; /* 説明文の色を指定 */
         }
         #zentai {
             display: grid;
@@ -25,27 +29,38 @@
             gap: 10px;
         }
         .box {
-            background: linear-gradient(to bottom, white, #ffefaf);
+            background-color: #ffefaf;
             padding: 5px;
             height: 200px;
             overflow: hidden;
         }
         .box h2 {
-            color: blue;
+            display: inline-block;
+            background: linear-gradient(to right, white, rgba(255, 255, 255, 0));
+            padding: 0 10px;
+            margin: 0;
+            font-size: 1.5em;
+            font-weight: bold;
+            color: blue; /* 色を青に固定 */
+            position: relative;
+            z-index: 1;
+        }
+        .box h2::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: -50px; /* グラデーションの範囲を広げる */
+            background: linear-gradient(to right, white, rgba(255, 255, 255, 0));
+            z-index: -1;
         }
         .box p {
             color: blue;
         }
         .firefox-icon {
-            float: right;
-            width: 30px; 
-        }
-        .firefox-title {
-            font-size: smaller; 
-            text-align: right;
-            margin-top: -10px; 
-            color: blue; 
-            font-family: cursive; 
+            width: 30px;
+            vertical-align: middle;
         }
     </style>
 </head>
@@ -82,10 +97,9 @@
     </div>
 
     <div class="box">
-        <h2>Mozilla Firefox</h2>
-        <div class="firefox-icon"><img src="firefox_icon.png" alt="Firefox"></div>
+        <h2>Mozilla Firefox <img src="firefox_icon.png" alt="Firefox" class="firefox-icon"></h2>
         <p>Mozilla Firefox（モジラ・ファイアーフォックス）は、Mozilla Foundationおよびその傘下のMozilla Corporationによって開発されているフリーかつオープンソースのウェブブラウザである。</p>
-      
+    </div>
 </div>
 
 </body>
